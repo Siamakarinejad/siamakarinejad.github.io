@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Official website of Iranian Production Designer Siamak Karinejad." />
+  <title>Siamak Karinejad — Production Designer</title>
+
+  <style>
+    :root{
+      --bg:#f5f3ee;
+      --ink:#111;
+      --muted:#77736d;
+      --line:#d8d4cc;
+      --ghost:#e7e3dc;
+      --pad:clamp(22px,5vw,72px);
+      --max:1320px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--ink);
+      font-family:Arial,Helvetica,sans-serif;
+      line-height:1.45;
+    }
+
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:var(--max);margin:auto;padding:0 var(--pad)}
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:10;
+      background:rgba(245,243,238,.92);
+      backdrop-filter:blur(12px);
+      border-bottom:1px solid var(--line);
+    }
+
+    nav{
+      height:72px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      font-size:13px;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+    }
+
+    .brand{font-weight:700}
+    .navlinks{display:flex;gap:24px}
+
+    .hero{
+      min-height:calc(100vh - 72px);
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
+      align-items:center;
+      gap:48px;
+      position:relative;
+      overflow:hidden;
+      padding:72px 0;
+    }
+
+    .ghost{
+      position:absolute;
+      left:-2vw;
+      top:50%;
+      transform:translateY(-50%);
+      font-weight:800;
+      font-size:clamp(86px,18vw,280px);
+      letter-spacing:-.07em;
+      color:var(--ghost);
+      white-space:nowrap;
+      z-index:0;
+      pointer-events:none;
+    }
+
+    .hero-copy,.portrait{position:relative;z-index:1}
+
+    .kicker{
+      font-size:12px;
+      letter-spacing:.2em;
+      text-transform:uppercase;
+      color:var(--muted);
+      margin-bottom:28px;
+    }
+
+    h1{
+      margin:0;
+      font-size:clamp(42px,7vw,104px);
+      line-height:.92;
+      letter-spacing:-.045em;
+      max-width:760px;
+    }
+
+    .role{
+      margin-top:26px;
+      font-size:clamp(18px,2vw,28px);
+      color:var(--muted);
+    }
+
+    .portrait img{
+      width:100%;
+      display:block;
+      border:1px solid var(--line);
+    }
+
+    section{
+      padding:110px 0;
+      border-top:1px solid var(--line);
+    }
+
+    .section-grid{
+      display:grid;
+      grid-template-columns:220px 1fr;
+      gap:56px;
+    }
+
+    .label{
+      font-size:12px;
+      letter-spacing:.18em;
+      text-transform:uppercase;
+      color:var(--muted);
+    }
+
+    .lead{
+      font-size:clamp(24px,3.2vw,48px);
+      line-height:1.18;
+      letter-spacing:-.03em;
+      max-width:940px;
+      margin:0;
+    }
+
+    .works{
+      margin-top:28px;
+      border-top:1px solid var(--line);
+    }
+
+    .work{
+      display:grid;
+      grid-template-columns:90px 1fr;
+      gap:20px;
+      padding:18px 0;
+      border-bottom:1px solid var(--line);
+      font-size:clamp(17px,2vw,25px);
+    }
+
+    .year{
+      color:var(--muted);
+      font-size:14px;
+      padding-top:5px;
+    }
+
+    .awards{display:grid;gap:24px}
+
+    .award{
+      display:grid;
+      grid-template-columns:90px 1fr;
+      gap:20px;
+      padding-bottom:24px;
+      border-bottom:1px solid var(--line);
+    }
+
+    .award strong{
+      display:block;
+      font-size:20px;
+      margin-bottom:5px;
+    }
+
+    .links{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      border-top:1px solid var(--line);
+    }
+
+    .link{
+      padding:26px 0;
+      border-bottom:1px solid var(--line);
+      display:flex;
+      justify-content:space-between;
+      gap:18px;
+    }
+
+    .link:nth-child(odd){padding-right:30px}
+    .link:nth-child(even){
+      padding-left:30px;
+      border-left:1px solid var(--line);
+    }
+
+    .arrow{color:var(--muted)}
+
+    footer{
+      padding:50px var(--pad);
+      max-width:var(--max);
+      margin:auto;
+      display:flex;
+      justify-content:space-between;
+      gap:20px;
+      font-size:12px;
+      color:var(--muted);
+      text-transform:uppercase;
+      letter-spacing:.1em;
+    }
+
+    @media(max-width:800px){
+      .navlinks{display:none}
+      .hero{grid-template-columns:1fr;padding:56px 0}
+      .portrait{max-width:560px}
+      .section-grid{grid-template-columns:1fr;gap:24px}
+      section{padding:78px 0}
+      .links{grid-template-columns:1fr}
+      .link:nth-child(odd),.link:nth-child(even){
+        padding:22px 0;
+        border-left:0;
+      }
+      .ghost{font-size:32vw;top:34%}
+      footer{flex-direction:column}
+    }
+  </style>
+</head>
+
+<body>
+<header>
+  <div class="wrap">
+    <nav>
+      <a class="brand" href="#top">Siamak Karinejad</a>
+      <div class="navlinks">
+        <a href="#about">About</a>
+        <a href="#work">Selected Work</a>
+        <a href="#recognition">Recognition</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap">
+    <section class="hero" style="border-top:0">
+      <div class="ghost">KARINEJAD</div>
+
+      <div class="hero-copy">
+        <div class="kicker">Production Designer</div>
+        <h1>SIAMAK<br>KARINEJAD</h1>
+        <div class="role">Feature films · Independent cinema · International co-productions</div>
+      </div>
+
+      <div class="portrait">
+        <img src="portrait.jpg" alt="Siamak Karinejad">
+      </div>
+    </section>
+  </div>
+
+  <section id="about">
+    <div class="wrap section-grid">
+      <div class="label">Biography</div>
+      <p class="lead">
+        Siamak Karinejad is an Iranian production designer working across feature films and independent cinema. His work begins with the screenplay and shapes spaces in which architecture, memory and atmosphere become part of the narrative.
+      </p>
+    </div>
+  </section>
+
+  <section id="work">
+    <div class="wrap section-grid">
+      <div class="label">Selected Filmography</div>
+
+      <div class="works">
+        <div class="work"><div class="year">2026</div><div>The Friend's House Is Here</div></div>
+        <div class="work"><div class="year">2026</div><div>A Time in Eternity</div></div>
+        <div class="work"><div class="year">2025</div><div>Between Dreams and Hope</div></div>
+        <div class="work"><div class="year">2024</div><div>Me, Maryam, the Children and 26 Others</div></div>
+        <div class="work"><div class="year">2023</div><div>Nine Nights</div></div>
+        <div class="work"><div class="year">2017</div><div>Ava</div></div>
+        <div class="work"><div class="year"></div><div>Without Border</div></div>
+        <div class="work"><div class="year"></div><div>The Seaside Villa</div></div>
+        <div class="work"><div class="year"></div><div>Sog</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="recognition">
+    <div class="wrap section-grid">
+      <div class="label">Awards & Recognition</div>
+
+      <div class="awards">
+        <div class="award">
+          <div class="year">2023</div>
+          <div>
+            <strong>Best Production Design</strong>
+            Cinema of the World International Film Festival · Nine Nights
+          </div>
+        </div>
+
+        <div class="award">
+          <div class="year">2018</div>
+          <div>
+            <strong>Canadian Screen Awards Nominee</strong>
+            Achievement in Art Direction / Production Design · Ava
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap section-grid">
+      <div class="label">Professional Links</div>
+
+      <div class="links">
+        <a class="link" href="Siamak_Karinejad_Press_Kit_2026_Final.pdf" target="_blank">
+          <span>Press Kit</span><span class="arrow">↗</span>
+        </a>
+
+        <a class="link" href="https://www.imdb.com/name/nm3541780/" target="_blank">
+          <span>IMDb</span><span class="arrow">↗</span>
+        </a>
+
+        <a class="link" href="https://www.productiondesignerscollective.org/member/siamak-karinejad/" target="_blank">
+          <span>Production Designers Collective</span><span class="arrow">↗</span>
+        </a>
+
+        <a class="link" href="https://www.instagram.com/siamak.kar.pd/" target="_blank">
+          <span>Instagram</span><span class="arrow">↗</span>
+        </a>
+
+        <a class="link" href="mailto:Siyamak.Karinejad@gmail.com">
+          <span>Email</span><span class="arrow">↗</span>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <span>© 2026 Siamak Karinejad</span>
+  <span>Production Designer</span>
+</footer>
+</body>
+</html>
